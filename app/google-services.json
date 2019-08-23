@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "741235615375",
+    "firebase_url": "https://truegospelheronetwork-5adce.firebaseio.com",
+    "project_id": "truegospelheronetwork-5adce",
+    "storage_bucket": "truegospelheronetwork-5adce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741235615375:android:d8bef6c04926c309",
+        "android_client_info": {
+          "package_name": "com.softdroom.truegospelheronetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741235615375-map1kvojujef34et8iu2i14tsa9s41cp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softdroom.truegospelheronetwork",
+            "certificate_hash": "4562f522409aaa3dec37e2da28f7fc235ed5d564"
+          }
+        },
+        {
+          "client_id": "741235615375-tgd105jqpc0corde5st7jlh23qtoo83r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkc3wd9bgiCmUSWJ7OnBnXaHsZNnIDHoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741235615375-tgd105jqpc0corde5st7jlh23qtoo83r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
