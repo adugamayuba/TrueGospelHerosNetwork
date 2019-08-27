@@ -1,5 +1,6 @@
 package com.softdroom.truegospelheronetwork.Authentication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -14,13 +15,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.softdroom.truegospelheronetwork.ChatMessage;
 import com.softdroom.truegospelheronetwork.R;
 
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
-
+    private FirebaseAuth mAuth;
     @InjectView(R.id.input_email)
     EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
@@ -34,6 +41,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.inject(this);
+
+
+
+
+// ...
+// Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+
+
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -74,6 +90,32 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Intent mletgotologin = new Intent();
+                            mletgotologin.setClass(LoginActivity.this, ChatMessage.class);
+                            startActivity(mletgotologin);
+
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+
+                        }
+
+                        // ...
+                    }
+                });
+
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
