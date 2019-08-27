@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG)
                         .show();
 
+
                 // Close the app
                 finish();
             }

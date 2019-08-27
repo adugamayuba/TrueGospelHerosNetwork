@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
+android:background="@drawable/backgroud"
     android:fitsSystemWindows="true"
     tools:context=".Authentication.LoginActivity">
 
