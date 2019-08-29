@@ -2,8 +2,9 @@ package com.softdroom.truegospelheronetwork.Authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -27,13 +28,13 @@ import com.softdroom.truegospelheronetwork.R;
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
-    @InjectView(R.id.input_name)
+    @BindView(R.id.input_name)
     EditText _nameText;
-    @InjectView(R.id.input_email) EditText _emailText;
-    @InjectView(R.id.input_password) EditText _passwordText;
-    @InjectView(R.id.btn_signup)
+    @BindView(R.id.input_email) EditText _emailText;
+    @BindView(R.id.input_password) EditText _passwordText;
+    @BindView(R.id.btn_signup)
     Button _signupButton;
-    @InjectView(R.id.link_login)
+    @BindView(R.id.link_login)
     TextView _loginLink;
     private FirebaseAuth mAuth;
 
@@ -56,7 +57,7 @@ public class SignupActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
 
 
