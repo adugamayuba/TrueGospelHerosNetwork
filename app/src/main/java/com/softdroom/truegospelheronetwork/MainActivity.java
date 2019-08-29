@@ -16,8 +16,7 @@ import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
-
+import com.softdroom.truegospelheronetwork.Authentication.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         if(FirebaseAuth.getInstance().getCurrentUser() == null) {
             // Start sign in/sign up activity
-            startActivityForResult(
-                    AuthUI.getInstance()
-                            .createSignInIntentBuilder()
-                            .build(),
-                    SIGN_IN_REQUEST_CODE
-            );
+            Intent mletgologin = new Intent();
+            mletgologin.setClass(MainActivity.this, LoginActivity.class);
+            startActivity(mletgologin);
+
+//            startActivityForResult(
+//                    AuthUI.getInstance()
+//                            .createSignInIntentBuilder()
+//                            .build(),
+//                    SIGN_IN_REQUEST_CODE
+//            );
         } else {
             // User is already signed in. Therefore, display
             // a welcome Toast

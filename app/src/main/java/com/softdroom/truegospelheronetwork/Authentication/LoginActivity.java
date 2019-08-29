@@ -2,8 +2,7 @@ package com.softdroom.truegospelheronetwork.Authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -28,22 +27,26 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
     private FirebaseAuth mAuth;
-    @BindView(R.id.input_email)
-    EditText _emailText;
-    @BindView(R.id.input_password) EditText _passwordText;
-    @BindView(R.id.btn_login)
+
+    EditText _emailText ;
+
+    EditText _passwordText;
+
     Button _loginButton;
-    @BindView(R.id.link_signup)
+
     TextView _signupLink;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
 
 
 
+_emailText = findViewById(R.id.input_email);
+_passwordText = findViewById(R.id.input_password);
+_loginButton = findViewById(R.id.btn_login);
+_signupLink = findViewById(R.id.link_signup);
 
 // ...
 // Initialize Firebase Auth
@@ -63,9 +66,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                // Start the Signup activity
-                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
             }
         });
     }
