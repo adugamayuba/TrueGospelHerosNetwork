@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab =
-                (FloatingActionButton)findViewById(R.id.fab);
+                findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText input = (EditText)findViewById(R.id.input);
+                EditText input = findViewById(R.id.input);
 
                 // Read the input field and push a new instance
                 // of ChatMessage to the Firebase database
@@ -87,16 +87,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayChatMessages() {
 
-        ListView listOfMessages = (ListView)findViewById(R.id.list_of_messages);
+        ListView listOfMessages = findViewById(R.id.list_of_messages);
 
         adapter = new FirebaseListAdapter<ChatMessage>(this, ChatMessage.class,
                 R.layout.message, FirebaseDatabase.getInstance().getReference()) {
             @Override
             protected void populateView(View v, ChatMessage model, int position) {
                 // Get references to the views of message.xml
-                TextView messageText = (TextView)v.findViewById(R.id.message_text);
-                TextView messageUser = (TextView)v.findViewById(R.id.message_user);
-                TextView messageTime = (TextView)v.findViewById(R.id.message_time);
+                TextView messageText = v.findViewById(R.id.message_text);
+                TextView messageUser = v.findViewById(R.id.message_user);
+                TextView messageTime = v.findViewById(R.id.message_time);
 
                 // Set their text
                 messageText.setText(model.getMessageText());
