@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
-android:background="@drawable/backgroud"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:fitsSystemWindows="true"
     tools:context=".Authentication.LoginActivity">
@@ -27,15 +27,16 @@ android:background="@drawable/backgroud"
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_marginTop="8dp"
-        android:textColorHint="#ffffff"
+
         android:layout_marginBottom="8dp">
 
         <EditText android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:textColor="#ffffff"
+
             android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,19 +44,21 @@ android:background="@drawable/backgroud"
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#ffffff"
+
         android:layout_marginTop="8dp"
+        app:passwordToggleEnabled="true"
         android:layout_marginBottom="8dp">
+
+
         <EditText android:id="@+id/input_password"
             android:layout_width="match_parent"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -67,7 +70,7 @@ android:background="@drawable/backgroud"
 
     <TextView android:id="@+id/link_signup"
         android:layout_width="fill_parent"
-        android:textColor="#ffffff"
+
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="No account yet? Create one"
