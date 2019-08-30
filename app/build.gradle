@@ -44,5 +44,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.0.0'
 
 
-
 }

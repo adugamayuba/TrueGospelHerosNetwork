@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Replicaofmaterial">
-        <activity android:name=".MainActivity"
-            android:theme="@style/Replicaofmaterial">
+        <activity
+            android:name=".test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +18,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Replicaofmaterial" android:name=".Authentication.LoginActivity" />
-        <activity android:theme="@style/Replicaofmaterial" android:name=".Authentication.SignupActivity"></activity>
+            android:name=".Authentication.LoginActivity"
+            android:theme="@style/Replicaofmaterial" />
+        <activity
+            android:name=".Authentication.SignupActivity"
+            android:theme="@style/Replicaofmaterial" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
