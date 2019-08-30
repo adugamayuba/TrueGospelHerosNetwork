@@ -2,6 +2,7 @@ package com.softdroom.truegospelheronetwork;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
@@ -19,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.softdroom.truegospelheronetwork.Authentication.LoginActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
 
     private static final int SIGN_IN_REQUEST_CODE = 10;

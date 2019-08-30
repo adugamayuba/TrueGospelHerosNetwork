@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-android:background="@color/text_color_primary"
+
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -14,13 +14,13 @@ android:background="@color/text_color_primary"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <!--<ImageView android:src="@drawable/logo"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="72dp"-->
-            <!--android:layout_marginBottom="24dp"-->
-            <!--android:layout_gravity="center_horizontal" />-->
+<ImageView
+    android:src="@drawable/logo"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp" />
 
-        <!--  Name Label -->
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
 
@@ -34,12 +34,14 @@ android:background="@color/text_color_primary"
                 android:hint="Name" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Email Label -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Email"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
+
             <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +55,9 @@ android:background="@color/text_color_primary"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
+
             <EditText android:id="@+id/input_password"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -65,6 +69,8 @@ android:background="@color/text_color_primary"
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/textColorWhite"
+            android:background="@color/colorPrimary"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
@@ -74,6 +80,7 @@ android:background="@color/text_color_primary"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:textColor="@color/colorPrimaryDark"
             android:text="Already a member? Login"
             android:gravity="center"
             android:textSize="16dip"/>

@@ -6,42 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:id="@+id/fab"
-        android:tint="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:fabSize="mini"/>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/fab"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Input"
-    android:id="@+id/input"
-    />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,5 +16,51 @@
         android:divider="@android:color/transparent"
         android:id="@+id/list_of_messages"
         android:layout_marginBottom="16dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryDark"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:elevation="?android:attr/buttonCornerRadius"
+        app:fabSize="mini"
+        app:pressedTranslationZ="?android:attr/buttonCornerRadius"
+        app:showMotionSpec="@android:anim/bounce_interpolator"
+        tools:src="@android:drawable/ic_menu_send"
+        android:focusable="true" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/input"
+    android:id="@+id/input"
+        android:autofillHints=""
+        android:inputType="" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
 
 </RelativeLayout>
