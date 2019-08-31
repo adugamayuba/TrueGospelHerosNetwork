@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Replicaofmaterial"
+        android:theme="@style/Theme.AppCompat"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -24,7 +24,8 @@
         </activity>
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.SignupActivity" />
-        <activity android:name=".test" />
+        <activity android:name=".test"
+            android:theme="@style/Replicaofmaterial" />
     </application>
 
 </manifest>
