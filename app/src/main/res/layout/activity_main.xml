@@ -20,21 +20,21 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        style="@style/Widget.MaterialComponents.FloatingActionButton"
+
+        style="@style/Widget.Design.FloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:clickable="true"
+        android:focusable="true"
         android:tint="@color/colorPrimaryDark"
         android:visibility="visible"
         app:backgroundTint="@color/colorPrimaryDark"
-        app:elevation="?android:attr/buttonCornerRadius"
         app:fabSize="mini"
-        app:pressedTranslationZ="?android:attr/buttonCornerRadius"
         app:showMotionSpec="@android:anim/bounce_interpolator"
-        tools:src="@android:drawable/ic_menu_send"
-        android:focusable="true" />
+        tools:src="@android:drawable/ic_menu_send" />
+
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,6 +52,7 @@
     android:id="@+id/input"
         android:autofillHints=""
         android:inputType="" />
+
 
 
     </com.google.android.material.textfield.TextInputLayout>
