@@ -38,6 +38,8 @@ public class LoginActivity extends Activity {
 
     TextView _signupLink;
 
+    TextView  mforgotPassword;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,7 @@ _emailText = findViewById(R.id.input_email);
 _passwordText = findViewById(R.id.input_password);
 _loginButton = findViewById(R.id.btn_login);
 _signupLink = findViewById(R.id.link_signup);
+mforgotPassword = findViewById(R.id.link_forgotpassword);
 
 // ...
 // Initialize Firebase Auth
@@ -73,6 +76,17 @@ _signupLink = findViewById(R.id.link_signup);
                 startActivity(intent);
             }
         });
+
+
+        mforgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                
+            }
+        });
+
     }
 
     public void login() {

@@ -82,6 +82,14 @@ android:background="@color/colorPrimary"
         android:text="No account yet? Create one"
         android:gravity="center"
         android:textSize="16dip"/>
+    <TextView android:id="@+id/link_forgotpassword"
+        android:layout_width="fill_parent"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Forgot Password"
+        android:gravity="center"
+        android:textSize="16dip"/>
 
 </LinearLayout>
 </ScrollView>
