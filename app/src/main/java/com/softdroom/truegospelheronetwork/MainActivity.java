@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
     private static final int SIGN_IN_REQUEST_CODE = 10;
     private FirebaseListAdapter<ChatMessage> adapter;
     private FirebaseAnalytics mFirebaseAnalytics;
-    private FirebaseDatabase m_Database;
+    private FirebaseDatabase FirebaseDatabase;
     private static boolean s_persistenceInitialized = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +56,14 @@ public class MainActivity extends Activity {
 
 
 
-        m_Database = FirebaseDatabase.getInstance();
+        FirebaseDatabase = FirebaseDatabase.getInstance();
 
         if (!s_persistenceInitialized) {
-            m_Database.setPersistenceEnabled(true);
+            FirebaseDatabase.setPersistenceEnabled(true);
             s_persistenceInitialized = true;
         }
 
-        m_Database.setLogLevel(Logger.Level.DEBUG);
+        FirebaseDatabase.setLogLevel(Logger.Level.DEBUG);
 
 
 
@@ -138,7 +138,7 @@ public class MainActivity extends Activity {
     }
 
     private void getGoal(String p_goalId, long p_endAt, String p_uid) {
-        Query ref = m_Database.getReference("v0/data/meditation/goals").child(p_goalId).child(p_uid)
+        Query ref = FirebaseDatabase.getReference("v0/data/meditation/goals").child(p_goalId).child(p_uid)
                 .orderByChild("time").endAt(p_endAt).limitToLast(1);
 
         ref.addValueEventListener(new ValueEventListener() {
