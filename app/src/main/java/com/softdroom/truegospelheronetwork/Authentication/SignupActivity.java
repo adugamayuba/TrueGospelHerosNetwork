@@ -28,35 +28,47 @@ public class SignupActivity extends Activity {
     private static final String TAG = "SignupActivity";
 
 
-    EditText _nameText = findViewById(R.id.input_name);
-    EditText _emailText = findViewById(R.id.input_email);
-    EditText _passwordText  = findViewById(R.id.input_password);
+    EditText _nameText ;
+    EditText _emailText ;
+    EditText _passwordText ;
 
-    Button _signupButton = findViewById(R.id.btn_signup);
+    Button _signupButton ;
 
-    TextView _loginLink = findViewById(R.id.link_login);
+    TextView _loginLink ;
+
+
     private FirebaseAuth mAuth;
 
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null){
-            Intent LetmovetoLogin = new Intent();
-            LetmovetoLogin.setClass(SignupActivity.this, LoginActivity.class);
-            startActivity(LetmovetoLogin);
-
-        }
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if (currentUser != null){
+//            Intent LetmovetoLogin = new Intent();
+//            LetmovetoLogin.setClass(SignupActivity.this, LoginActivity.class);
+//            startActivity(LetmovetoLogin);
+//
+//        }else{
+//            return;
+//        }
+//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
 
+
+        setContentView(R.layout.activity_signup);
+         _nameText = findViewById(R.id.input_name);
+         _emailText = findViewById(R.id.input_email);
+         _passwordText  = findViewById(R.id.input_password);
+
+         _signupButton = findViewById(R.id.btn_signup);
+
+         _loginLink = findViewById(R.id.link_login);
 
 
 // Initializing Firebase Auth

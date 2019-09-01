@@ -21,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.softdroom.truegospelheronetwork.ChatMessage;
+import com.softdroom.truegospelheronetwork.MainActivity;
 import com.softdroom.truegospelheronetwork.R;
 
 
@@ -103,7 +104,7 @@ _signupLink = findViewById(R.id.link_signup);
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent mletgotologin = new Intent();
-                            mletgotologin.setClass(LoginActivity.this, ChatMessage.class);
+                            mletgotologin.setClass(LoginActivity.this, MainActivity.class);
                             startActivity(mletgotologin);
 
 

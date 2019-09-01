@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -23,8 +24,15 @@ import com.google.android.material.theme.MaterialComponentsViewInflater;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.crash.FirebaseCrash;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Logger;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.softdroom.truegospelheronetwork.Authentication.LoginActivity;
+
+import java.util.Date;
 
 
 public class MainActivity extends Activity {
@@ -33,7 +41,8 @@ public class MainActivity extends Activity {
     private static final int SIGN_IN_REQUEST_CODE = 10;
     private FirebaseListAdapter<ChatMessage> adapter;
     private FirebaseAnalytics mFirebaseAnalytics;
-
+    private FirebaseDatabase m_Database;
+    private static boolean s_persistenceInitialized = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -44,6 +53,19 @@ public class MainActivity extends Activity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         FirebaseCrash.log("Activity created");
+
+
+
+        m_Database = FirebaseDatabase.getInstance();
+
+        if (!s_persistenceInitialized) {
+            m_Database.setPersistenceEnabled(true);
+            s_persistenceInitialized = true;
+        }
+
+        m_Database.setLogLevel(Logger.Level.DEBUG);
+
+
 
         if(FirebaseAuth.getInstance().getCurrentUser() == null) {
             // Start sign in/sign up activity
@@ -100,6 +122,40 @@ public class MainActivity extends Activity {
 
         //...................
     }
+
+
+
+
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //long endAt = 100L; // Fixed value: CRASH on third app restart
+          long endAt = new Date().getTime(); // Dynamic value: NO CRASH
+        getGoal("min_per_day", endAt, "some_uid");
+    }
+
+    private void getGoal(String p_goalId, long p_endAt, String p_uid) {
+        Query ref = m_Database.getReference("v0/data/meditation/goals").child(p_goalId).child(p_uid)
+                .orderByChild("time").endAt(p_endAt).limitToLast(1);
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.i("FB", "Snapshot: " + dataSnapshot);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.e("FB", "Error: " + error);
+            }
+        });
+    }
+
+
+
 
 
     private void displayChatMessages() {
