@@ -43,11 +43,19 @@ public class MainActivity extends Activity {
     private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseDatabase FirebaseDatabase;
     private static boolean s_persistenceInitialized = false;
+
+    FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+    FloatingActionButton      fab2 = (FloatingActionButton) findViewById(R.id.fab1);
+    FloatingActionButton   fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+
+    boolean isFABOpen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -120,6 +128,31 @@ public class MainActivity extends Activity {
             }
         });
 
+
+
+
+
+
+
+
+
+
+
+
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!isFABOpen){
+                    showFABMenu();
+                }else{
+                    closeFABMenu();
+                }
+            }
+        });
+
+
+
+
         //...................
     }
 
@@ -184,6 +217,27 @@ public class MainActivity extends Activity {
         listOfMessages.setAdapter(adapter);
 
     }
+
+
+
+
+
+
+    private void showFABMenu(){
+
+        isFABOpen=true;
+        fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
+        fab2.animate().translationY(-getResources().getDimension(R.dimen.standard_105));
+        fab3.animate().translationY(-getResources().getDimension(R.dimen.standard_155));
+    }
+
+    private void closeFABMenu(){
+        isFABOpen=false;
+        fab1.animate().translationY(0);
+        fab2.animate().translationY(0);
+        fab3.animate().translationY(0);
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,

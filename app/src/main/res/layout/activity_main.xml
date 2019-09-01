@@ -21,6 +21,35 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/fab2"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/fab1"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="45dp"
+        android:layout_above="@id/fab"
+         android:layout_alignParentRight="true"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+
+        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
