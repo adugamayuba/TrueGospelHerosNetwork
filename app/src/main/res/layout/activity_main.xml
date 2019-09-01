@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/tghnbac"
+    android:background="#ffffff"
     android:theme="@style/Theme.AppCompat"
+
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -48,25 +49,34 @@
         android:layout_margin="5dp"
 
         app:srcCompat="@android:drawable/ic_dialog_map" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@android:drawable/ic_menu_send"
-        android:tint="@color/colorPrimaryDark"
-        android:visibility="visible"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:backgroundTintMode="add"
-        app:elevation="@dimen/com_facebook_button_corner_radius"
-        app:fabSize="mini"
-        app:pressedTranslationZ="@dimen/visible_icon"
-        app:showMotionSpec="@android:anim/bounce_interpolator"
-         />
+        android:id="@+id/fab"
+
+        />
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--app:srcCompat="@android:drawable/ic_menu_send"-->
+        <!--android:tint="@color/colorPrimaryDark"-->
+        <!--android:visibility="visible"-->
+        <!--app:backgroundTint="@color/colorPrimaryDark"-->
+        <!--app:backgroundTintMode="add"-->
+        <!--app:elevation="@dimen/com_facebook_button_corner_radius"-->
+        <!--app:fabSize="mini"-->
+        <!--app:pressedTranslationZ="@dimen/visible_icon"-->
+        <!--app:showMotionSpec="@android:anim/bounce_interpolator"-->
+         <!--/>-->
 
 
 

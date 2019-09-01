@@ -91,8 +91,8 @@ mforgotPassword = findViewById(R.id.link_forgotpassword);
 
 
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                builder.setTitle("Reset password");
+                final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                builder.setTitle("Enter Email Address");
 
 
                 final EditText input = new EditText(LoginActivity.this);
@@ -112,6 +112,9 @@ mforgotPassword = findViewById(R.id.link_forgotpassword);
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             Log.d(TAG, "Email sent.");
+
+                                            builder.setMessage("Email sent");
+
                                         }
                                     }
                                 });

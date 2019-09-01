@@ -44,9 +44,9 @@ public class MainActivity extends Activity {
     private FirebaseDatabase FirebaseDatabase;
     private static boolean s_persistenceInitialized = false;
 
-    FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
-    FloatingActionButton      fab2 = (FloatingActionButton) findViewById(R.id.fab1);
-    FloatingActionButton   fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+    FloatingActionButton fab1 ;
+    FloatingActionButton  fab2;
+    FloatingActionButton fab3;
 
     boolean isFABOpen;
 
@@ -55,6 +55,12 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+              fab2 = (FloatingActionButton) findViewById(R.id.fab1);
+          fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+
 
 
         // Obtain the FirebaseAnalytics instance.
@@ -157,6 +163,11 @@ fab2.setOnClickListener(new View.OnClickListener() {
 
 
         FirebaseAuth.getInstance().signOut();
+
+
+        Intent signout = new Intent();
+        signout.setClass(MainActivity.this, LoginActivity.class);
+        startActivity(signout);
     }
 });
 
