@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    app:cardElevation="20dp"
-
-    app:cardBackgroundColor="@color/colorPrimary"
-
-    android:layout_height="wrap_content">
-
-<LinearLayout
     android:orientation="vertical"
-    android:layout_width="wrap_content"
+    app:cardElevation="20dp"
     android:layout_height="wrap_content">
+
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
+        android:textColor="#000000"
         android:id="@+id/message_user"
         android:textSize="6dp"
         android:textStyle="normal|bold" />
@@ -27,11 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_rectangle"
         android:id="@+id/message_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp" />
 
     <TextView
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -39,5 +36,3 @@
         android:id="@+id/message_time" />
 
 </LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>

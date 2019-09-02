@@ -253,7 +253,7 @@ fab1.setOnClickListener(new View.OnClickListener() {
 
     private void closeFABMenu(){
         isFABOpen=false;
-       fab1.animate().translationY(0);
+         fab1.animate().translationY(0);
         fab2.animate().translationY(0);
         fab3.animate().translationY(0);
     }
