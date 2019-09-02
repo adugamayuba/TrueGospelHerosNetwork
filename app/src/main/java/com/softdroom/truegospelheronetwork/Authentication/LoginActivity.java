@@ -157,6 +157,7 @@ mforgotPassword = findViewById(R.id.link_forgotpassword);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
+
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 

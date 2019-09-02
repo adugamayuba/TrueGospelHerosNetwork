@@ -44,6 +44,8 @@ public class MainActivity extends Activity {
     private FirebaseDatabase FirebaseDatabase;
     private static boolean s_persistenceInitialized = false;
 
+
+    FloatingActionButton fab ;
     FloatingActionButton fab1 ;
     FloatingActionButton  fab2;
     FloatingActionButton fab3;
@@ -56,7 +58,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
               fab2 = (FloatingActionButton) findViewById(R.id.fab1);
           fab3 = (FloatingActionButton) findViewById(R.id.fab3);
@@ -110,10 +112,10 @@ public class MainActivity extends Activity {
 //.......................................
 
 
-        FloatingActionButton fab =
-                findViewById(R.id.fab);
+        FloatingActionButton send =
+                findViewById(R.id.send);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditText input = findViewById(R.id.input);
@@ -145,7 +147,7 @@ public class MainActivity extends Activity {
 
 
 
-        fab1.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!isFABOpen){
@@ -157,7 +159,7 @@ public class MainActivity extends Activity {
         });
 
 
-fab2.setOnClickListener(new View.OnClickListener() {
+fab1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
@@ -251,7 +253,7 @@ fab2.setOnClickListener(new View.OnClickListener() {
 
     private void closeFABMenu(){
         isFABOpen=false;
-        fab1.animate().translationY(0);
+       fab1.animate().translationY(0);
         fab2.animate().translationY(0);
         fab3.animate().translationY(0);
     }
