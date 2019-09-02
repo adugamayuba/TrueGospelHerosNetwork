@@ -32,17 +32,17 @@ android:background="@drawable/tghnbac"
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="8dp"
-
         android:layout_marginBottom="8dp">
 
         <EditText android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-
             android:hint="Email" />
+
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
