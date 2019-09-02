@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.softdroom.truegospelheronetwork">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,8 +23,11 @@
         </activity>
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.SignupActivity" />
-        <activity android:name=".test"
+        <activity
+            android:name=".test"
             android:theme="@style/Replicaofmaterial" />
+        <activity android:name=".AGApplication" />
+        <activity android:name=".Admin"></activity>
     </application>
 
 </manifest>

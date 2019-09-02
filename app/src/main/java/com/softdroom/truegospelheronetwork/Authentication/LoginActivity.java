@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.softdroom.truegospelheronetwork.Admin;
 import com.softdroom.truegospelheronetwork.ChatMessage;
 import com.softdroom.truegospelheronetwork.MainActivity;
 import com.softdroom.truegospelheronetwork.R;
@@ -158,8 +159,8 @@ mforgotPassword = findViewById(R.id.link_forgotpassword);
         progressDialog.show();
 
 
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+        final String email = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
         mAuth.signInWithEmailAndPassword(email, password)
@@ -167,6 +168,13 @@ mforgotPassword = findViewById(R.id.link_forgotpassword);
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            if(email.equals("admin@gmail.com") && password.equals("emmagreat")){
+                                Intent madmin = new Intent();
+                                madmin.setClass(LoginActivity.this, Admin.class);
+                                startActivity(madmin);
+
+                            }
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
