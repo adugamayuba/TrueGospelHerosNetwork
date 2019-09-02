@@ -71,13 +71,13 @@ public class MainActivity extends Activity {
 
 
         FirebaseDatabase = FirebaseDatabase.getInstance();
-
+        FirebaseDatabase.setLogLevel(Logger.Level.DEBUG);
         if (!s_persistenceInitialized) {
             FirebaseDatabase.setPersistenceEnabled(true);
             s_persistenceInitialized = true;
         }
 
-        FirebaseDatabase.setLogLevel(Logger.Level.DEBUG);
+
 
 
 
