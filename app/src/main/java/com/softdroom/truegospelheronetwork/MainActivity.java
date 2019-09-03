@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
               fab2 = (FloatingActionButton) findViewById(R.id.fab1);
           fab3 = (FloatingActionButton) findViewById(R.id.fab3);
 
-
+//        FirebaseDatabase.setLogLevel(Logger.Level.DEBUG);
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
 
 
         FirebaseDatabase = FirebaseDatabase.getInstance();
-        FirebaseDatabase.setLogLevel(Logger.Level.DEBUG);
+
         if (!s_persistenceInitialized) {
             FirebaseDatabase.setPersistenceEnabled(true);
             s_persistenceInitialized = true;
