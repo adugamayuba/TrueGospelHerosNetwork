@@ -1,15 +1,10 @@
 package com.softdroom.truegospelheronetwork.Authentication;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
@@ -24,14 +19,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.softdroom.truegospelheronetwork.Admin;
-import com.softdroom.truegospelheronetwork.ChatMessage;
 import com.softdroom.truegospelheronetwork.MainActivity;
 import com.softdroom.truegospelheronetwork.R;
 
-import static android.app.PendingIntent.getActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends android.support.v7.app.AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
     private FirebaseAuth mAuth;

@@ -1,13 +1,8 @@
 package com.softdroom.truegospelheronetwork;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.AppComponentFactory;
-import androidx.lifecycle.AndroidViewModel;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -16,18 +11,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.resources.MaterialResources;
-import com.google.android.material.theme.MaterialComponentsViewInflater;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Logger;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.softdroom.truegospelheronetwork.Authentication.LoginActivity;
@@ -35,7 +26,7 @@ import com.softdroom.truegospelheronetwork.Authentication.LoginActivity;
 import java.util.Date;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends android.support.v7.app.AppCompatActivity {
 
 
     private static final int SIGN_IN_REQUEST_CODE = 10;

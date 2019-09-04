@@ -15,7 +15,7 @@ android:background="@drawable/tghnbac"
         android:paddingRight="24dp">
 
 <ImageView
-    android:src="@drawable/logo"
+    app:srcCompat="@drawable/logo"
     android:layout_width="wrap_content"
     android:layout_height="100dp" />
 
