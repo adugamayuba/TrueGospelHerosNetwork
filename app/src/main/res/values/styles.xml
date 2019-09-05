@@ -1,17 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- Base application theme. -->
-    <style name="Replicaofmaterial" parent="Theme.AppCompat.Light.NoActionBar" >
-        <item name="colorAccent" tools:targetApi="lollipop">@color/colorPrimaryAccent</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark" >@color/colorPrimaryDark</item>
-        <item name="android:textColorPrimary">@color/textColor</item>
-        <item name="android:statusBarColor" >@android:color/white</item>
-        <item name="android:textColorPrimaryInverse">@android:color/white</item>
-        <item name="android:textColorSecondary">?attr/colorAccent</item>
-        <item name="android:colorForeground">@color/foreground_material_light</item>
-        <item name="android:navigationBarColor">@color/colorPrimary</item>
-        <item name="android:textColorSecondaryInverse">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/quantum_googgreen500</item>
+        <item name="android:colorBackground">@color/anonymous_button_color</item>
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
 </resources>

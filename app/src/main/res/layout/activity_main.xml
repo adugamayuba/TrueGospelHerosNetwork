@@ -1,142 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-   android:layout_height="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@id/send"
-        android:dividerHeight="16dp"
-        android:divider="@android:color/transparent"
-        android:id="@+id/list_of_messages"
-        android:layout_marginBottom="16dp"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab3"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_above="@id/fab2"
-        android:layout_alignParentRight="true"
-        android:contentDescription="Menu"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="-45dp"
-        app:srcCompat="@android:drawable/ic_btn_speak_now" />
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab2"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-
-        android:layout_alignTop="@+id/fab"
-
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="12dp"
-        app:srcCompat="@android:drawable/ic_btn_speak_now" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-
-        android:layout_alignTop="@+id/fab2"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="8dp"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="45dp"
-        android:layout_above="@id/send"
-         android:layout_alignParentRight="true"
-        android:layout_height="45dp"
-        android:layout_margin="5dp"
-
-        app:srcCompat="@android:drawable/ic_dialog_map" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/send"
-        app:rippleColor="@color/colorPrimary"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="50dp"
-        android:src="@android:drawable/ic_menu_send"
-        android:layout_marginBottom="10dp"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
-
-    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:clickable="true"-->
-        <!--android:focusable="true"-->
-        <!--app:srcCompat="@android:drawable/ic_menu_send"-->
-        <!--android:tint="@color/colorPrimaryDark"-->
-        <!--android:visibility="visible"-->
-        <!--app:backgroundTint="@color/colorPrimaryDark"-->
-        <!--app:backgroundTintMode="add"-->
-        <!--app:elevation="@dimen/com_facebook_button_corner_radius"-->
-        <!--app:fabSize="mini"-->
-        <!--app:pressedTranslationZ="@dimen/visible_icon"-->
-        <!--app:showMotionSpec="@android:anim/bounce_interpolator"-->
-         <!--/>-->
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:background="#cec6c6"
-        android:layout_toStartOf="@id/send"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="5dp"
-        android:layout_alignParentStart="true">
-
-
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/input"
-        android:textColor="#000000"
-    android:id="@+id/input"
-
-        android:inputType="" />
-
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        style="@style/TextAppearance.Compat.Notification.Info.Media"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="304dp"
-        android:layout_marginBottom="11dp"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

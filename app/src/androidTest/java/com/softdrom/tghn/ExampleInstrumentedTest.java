@@ -1,4 +1,4 @@
-package com.softdroom.truegospelheronetwork;
+package com.softdrom.tghn;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.softdroom.truegospelheronetwork", appContext.getPackageName());
+        assertEquals("com.softdrom.tghn", appContext.getPackageName());
     }
 }

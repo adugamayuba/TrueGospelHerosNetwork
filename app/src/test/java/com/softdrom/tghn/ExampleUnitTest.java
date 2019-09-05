@@ -1,4 +1,4 @@
-package com.softdroom.truegospelheronetwork;
+package com.softdrom.tghn;
 
 import org.junit.Test;
 

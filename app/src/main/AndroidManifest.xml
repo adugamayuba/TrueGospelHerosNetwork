@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.softdroom.truegospelheronetwork">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    package="com.softdroom.tghn">
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
-        tools:replace="android:appComponentFactory"
-        android:appComponentFactory="whateverString"
+
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat"
+        android:theme="@style/AppTheme"
+        tools:node="replace"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,14 +21,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentication.LoginActivity" />
-        <activity android:name=".Authentication.SignupActivity" />
-        <activity
-            android:name=".test"
-            android:theme="@style/Replicaofmaterial" />
-        <activity android:name=".AGApplication" />
-        <activity android:name=".Admin" />
-        <activity android:name=".TGHN"></activity>
+
+
+        <activity android:name="co.chatsdk.ui.login.SplashScreenActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name="co.chatsdk.ui.login.LoginActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.contacts.ForwardMessageActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.main.BaseActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.main.MainAppBarActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.main.MainDrawActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.profile.EditProfileActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.profile.ProfileActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.search.SearchActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.threads.AddUsersToThreadActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.threads.CreateThreadActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.threads.ThreadDetailsActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.threads.ThreadEditDetailsActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.utils.ImagePreviewActivity"> </activity>
+
+
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
+
