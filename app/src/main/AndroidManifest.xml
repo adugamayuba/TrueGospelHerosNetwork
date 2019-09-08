@@ -33,6 +33,7 @@
         <activity android:name="co.chatsdk.ui.login.LoginActivity"> </activity>
         <activity android:name="co.chatsdk.ui.contacts.ForwardMessageActivity"> </activity>
         <activity android:name="co.chatsdk.ui.main.BaseActivity"> </activity>
+
         <activity android:name="co.chatsdk.ui.main.MainAppBarActivity"> </activity>
         <activity android:name="co.chatsdk.ui.main.MainDrawActivity"> </activity>
         <activity android:name="co.chatsdk.ui.profile.EditProfileActivity"> </activity>
@@ -43,6 +44,8 @@
         <activity android:name="co.chatsdk.ui.threads.ThreadDetailsActivity"> </activity>
         <activity android:name="co.chatsdk.ui.threads.ThreadEditDetailsActivity"> </activity>
         <activity android:name="co.chatsdk.ui.utils.ImagePreviewActivity"> </activity>
+        <activity android:name="co.chatsdk.ui.chat.ChatActivity"> </activity>
+
 
 
         <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
